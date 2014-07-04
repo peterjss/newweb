@@ -12,16 +12,15 @@
     <meta name="author" content="">
 
     <!-- CSS Global Compulsory-->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/headers/header1.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="shortcut icon" href="favicon.ico">        
     <!-- CSS Implementing Plugins -->    
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css" type="text/css" media="screen">
     <!-- CSS Page Style -->    
-    <link rel="stylesheet" href="assets/css/pages/page_search.css">              
+    <link rel="stylesheet" href="assets/css/pages/portfolio-v2.css">    
     <!-- CSS Theme -->    
     <link rel="stylesheet" href="assets/css/themes/default.css" id="style_color">
     <link rel="stylesheet" href="assets/css/themes/headers/default.css" id="style_color-header-1">    
@@ -74,7 +73,6 @@
 </div><!--/top-->
 <!--=== End Top ===-->
 
-
 <!--=== Header ===-->
 <div class="header">
     <div class="navbar navbar-default" role="navigation">
@@ -96,29 +94,19 @@
             <div class="collapse navbar-collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown ">
-                        <a href="index.html">
+                        <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">
                             Home
                             <!--<i class="icon-angle-down"></i>-->
                         </a>
-                        <!--<ul class="dropdown-menu">-->
-                        <!--<li><a href="index.html">Option 1: Default Page</a></li>-->
-                        <!--<li><a href="page_home1.html">Option 2: Layer Slider</a></li>-->
-                        <!--<li class="active"><a href="page_home2.html">Option 3: Revolution Slider</a></li>-->
-                        <!--<li><a href="page_home3.html">Option 4: Amazing Content</a></li>-->
-                        <!--<li><a href="page_home4.html">Option 5: Home Sidebar</a></li>-->
-                        <!--<li><a href="page_home5.html">Option 6: Home Flatty</a></li>-->
-                        <!--<li><a href="page_home6.html">Option 7: Home Magazine</a></li>-->
-                        <!--<li><a href="page_home7.html">Option 8: Home Portfolio</a></li>-->
-                        <!--</ul>-->
                     </li>
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">
                             About GenRay
                             <i class="icon-angle-down"></i>
                         </a>
-                        <ul class="dropdown-menu ">
+                        <ul class="dropdown-menu">
                             <li><a href="page_about.html">GenRay Values</a></li>
-                            <li  class="active"><a href="who_we_are.html" >Who we are?</a></li>
+                            <li><a href="who_we_are.html">Who we are?</a></li>
                             <li><a href="where_we_are.html">Where we are?</a></li>
                             <li><a href="non_profitable_activities.html">Non-profitable activities</a></li>
                         </ul>
@@ -134,7 +122,7 @@
                             <li><a href="consumer_marketing.html">Consumer Marketing</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="skin_care.html" >
                             GenRay Innovation
                         </a>
@@ -145,7 +133,6 @@
                             Contact Us
                             <!--<i class="icon-angle-down"></i>-->
                         </a>
-
                     </li>
 
                     <li class="hidden-sm"><a class="search"><i class="icon-search search-btn"></i></a></li>
@@ -164,54 +151,171 @@
 </div><!--/header-->
 <!--=== End Header ===-->
 
-
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs margin-bottom-40">
     <div class="container">
-        <h1 class="pull-left">Who we are?</h1>
+        <h1 class="pull-left">GenRay Innovation</h1>
         <ul class="pull-right breadcrumb">
             <li><a href="index.html">Home</a></li>
-            <li><a href="">About GenRay</a></li>
-            <li class="active">Who we are?</li>
+            <li><a href="">GenRay Innovation</a></li>
         </ul>
-    </div>
+    </div><!--/container-->
 </div><!--/breadcrumbs-->
 <!--=== End Breadcrumbs ===-->
 
 <!--=== Content Part ===-->
-<div class="container">		
-    <!-- Service Blcoks -->
-    <div class="row service-v1 margin-bottom-40">
-        <div class="col-md-4 md-margin-bottom-40">
-            <img class="img-responsive" src="assets/img/sliders/revolution/bg-w1.png" alt="" style="height:200px;">
-            <h2>Developer Friendly Code</h2>
-            <p>
-                A very select group of  <strong class="color-green">executives and
-                technical innovation experts</strong> from P&G, GE, Unilever, J&J, Heinz, Tesco... with successful track records,
-                shared values, and recommended by trusted members.
-            </p>
-        </div>
+<div class="container"> 	
+    <!-- Portfolio Sorting Blocks -->
+    <div class="sorting-block">
+        <ul class="sorting-nav sorting-nav-v1 text-center">
+            <li class="filter" data-filter="all">All</li>
+            <li class="filter" data-filter="category_1">Skin Care</li>
+            <li class="filter" data-filter="category_2">Skin Cleanser</li>
+            <li class="filter" data-filter="category_3">Others</li>
+        </ul>
 
-        <div class="col-md-4">
-            <img class="img-responsive" src="assets/img/main/our.png" alt="" style="height:200px;">
-            <h2>Developer Friendly Code</h2>
-            <p>
-                The average working experience is more than 15 years, combined experience of 150+ years
-            </p>
-        </div>
-        <div class="col-md-4 md-margin-bottom-40">
-            <img class="img-responsive" src="assets/img/main/flag.png" alt="" style="height:200px;">
-            <h2>Developer Friendly Code</h2>
-            <p>
-                Multi-skilled/Multicultural Group: Chinese, British, French and Singaporese.
-            </p>
-        </div>
+        <ul class="row sorting-grid">
+            <li class="col-md-3 col-sm-6 col-xs-12 mix category_1" data-cat="1">
+                <a href="#">
+                    <img class="img-responsive" src="assets/img/photos/p1-0.png" alt="">
+                    <span class="sorting-cover">
+                        <span>Happy New Year</span>
+                        <p>Anim pariatur cliche reprehenderit</p>
+                    </span>
+                </a>
+            </li>
+            <li class="col-md-3 col-sm-6 col-xs-12 mix category_3" data-cat="3">
+                <a href="#">
+                    <img class="img-responsive" src="assets/img/photos/p3-0.png" alt="">
+                    <span class="sorting-cover">
+                        <span>Happy New Year</span>
+                        <p>Anim pariatur cliche reprehenderit</p>
+                    </span>
+                </a>
+            </li>
+            <li class="col-md-3 col-sm-6 col-xs-12 mix category_3" data-cat="3">
+                <a href="#">
+                    <img class="img-responsive" src="assets/img/photos/p3-1.png" alt="">
+                    <span class="sorting-cover">
+                        <span>Happy New Year</span>
+                        <p>Anim pariatur cliche reprehenderit</p>
+                    </span>
+                </a>
+            </li>
+            <li class="col-md-3 col-sm-6 col-xs-12 mix category_1" data-cat="1">
+                <a href="#">
+                    <img class="img-responsive" src="assets/img/photos/p1-1.jpg" alt="">
+                    <span class="sorting-cover">
+                        <span>Happy New Year</span>
+                        <p>Anim pariatur cliche reprehenderit</p>
+                    </span>
+                </a>
+            </li>
+            <li class="col-md-3 col-sm-6 col-xs-12 mix category_1" data-cat="1">
+                <a href="#">
+                    <img class="img-responsive" src="assets/img/photos/p1-2.jpg" alt="">
+                    <span class="sorting-cover">
+                        <span>Happy New Year</span>
+                        <p>Anim pariatur cliche reprehenderit</p>
+                    </span>
+                </a>
+            </li>
+            <li class="col-md-3 col-sm-6 col-xs-12 mix category_1" data-cat="1">
+                <a href="#">
+                    <img class="img-responsive" src="assets/img/photos/p1-3.jpg" alt="">
+                    <span class="sorting-cover">
+                        <span>Happy New Year</span>
+                        <p>Anim pariatur cliche reprehenderit</p>
+                    </span>
+                </a>
+            </li>
+            <li class="col-md-3 col-sm-6 col-xs-12 mix  category_1" data-cat="1">
+                <a href="#">
+                    <img class="img-responsive" src="assets/img/photos/p1-4.jpg" alt="">
+                    <span class="sorting-cover">
+                        <span>Happy New Year</span>
+                        <p>Anim pariatur cliche reprehenderit</p>
+                    </span>
+                </a>
+            </li>
+            <li class="col-md-3 col-sm-6 col-xs-12 mix category_1" data-cat="1">
+                <a href="#">
+                    <img class="img-responsive" src="assets/img/photos/p1-5.jpg" alt="">
+                    <span class="sorting-cover">
+                        <span>Happy New Year</span>
+                        <p>Anim pariatur cliche reprehenderit</p>
+                    </span>
+                </a>
+            </li>
+            <li class="col-md-3 col-sm-6 col-xs-12 mix category_1" data-cat="1">
+                <a href="#">
+                    <img class="img-responsive" src="assets/img/photos/p1-6.jpg" alt="">
+                    <span class="sorting-cover">
+                        <span>Happy New Year</span>
+                        <p>Anim pariatur cliche reprehenderit</p>
+                    </span>
+                </a>
+            </li>
+            <li class="col-md-3 col-sm-6 col-xs-12 mix category_2 " data-cat="2">
+                <a href="#">
+                    <img class="img-responsive" src="assets/img/photos/p2-0.png" alt="">
+                    <span class="sorting-cover">
+                        <span>Happy New Year</span>
+                        <p>Anim pariatur cliche reprehenderit</p>
+                    </span>
+                </a>
+            </li>
+            <li class="col-md-3 col-sm-6 col-xs-12 mix category_3" data-cat="3">
+                <a href="#">
+                    <img class="img-responsive" src="assets/img/photos/p3-0.png" alt="">
+                    <span class="sorting-cover">
+                        <span>Happy New Year</span>
+                        <p>Anim pariatur cliche reprehenderit</p>
+                    </span>
+                </a>
+            </li>
+            <li class="col-md-3 col-sm-6 col-xs-12 mix category_3" data-cat="3">
+                <a href="#">
+                    <img class="img-responsive" src="assets/img/photos/p3-1.png" alt="">
+                    <span class="sorting-cover">
+                        <span>Happy New Year</span>
+                        <p>Anim pariatur cliche reprehenderit</p>
+                    </span>
+                </a>
+            </li>
+            <li class="col-md-3 col-sm-6 col-xs-12 mix category_3" data-cat="3">
+                <a href="#">
+                    <img class="img-responsive" src="assets/img/photos/p3-2.png" alt="">
+                    <span class="sorting-cover">
+                        <span>Happy New Year</span>
+                        <p>Anim pariatur cliche reprehenderit</p>
+                    </span>
+                </a>
+            </li>
+            <li class="col-md-3 col-sm-6 col-xs-12 mix category_3" data-cat="3">
+                <a href="#">
+                    <img class="img-responsive" src="assets/img/photos/p3-3.jpg" alt="">
+                    <span class="sorting-cover">
+                        <span>Happy New Year</span>
+                        <p>Anim pariatur cliche reprehenderit</p>
+                    </span>
+                </a>
+            </li>
+            <li class="col-md-3 col-sm-6 col-xs-12 mix category_3" data-cat="3">
+                <a href="#">
+                    <img class="img-responsive" src="assets/img/photos/p3-4.jpg" alt="">
+                    <span class="sorting-cover">
+                        <span>Happy New Year</span>
+                        <p>Anim pariatur cliche reprehenderit</p>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    
+        <div class="clearfix"></div>
     </div>
-    <!-- End Service Blcoks -->
-
-    <hr class="margin-bottom-40">
-
-</div><!--/container-->
+    <!-- End Portfolio Sorting Blocks -->
+</div><!--/container-->	 	
 <!--=== End Content Part ===-->
 
 <!--=== Footer ===-->
@@ -268,13 +372,14 @@
 <script type="text/javascript" src="assets/plugins/hover-dropdown.min.js"></script> 
 <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
 <!-- JS Implementing Plugins -->           
-<script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery.mixitup.min.js"></script>    
 <!-- JS Page Level -->           
 <script type="text/javascript" src="assets/js/app.js"></script>
+<script type="text/javascript" src="assets/js/pages/portfolio.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
         App.init();
-        App.initSliders();        
+        Portfolio.init();                             
     });
 </script>
 <!--[if lt IE 9]>
