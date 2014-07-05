@@ -1,0 +1,23 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+dist/
+repository/
+
+# Idea Files #
+.idea
+*.iml
+
+# Eclipse Files#
+.project
+.settings
+.classpath
+
+# maven #
+**/target/
+
+# jira #
+atlassian*.xml
