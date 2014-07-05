@@ -107,6 +107,7 @@ var App = function () {
             handleSearch();
             handleSwitcher();
             handleBoxed();
+            loadPage();
         },
 
         initSliders: function () {
@@ -184,8 +185,116 @@ var App = function () {
                 slideWidth: 360,
                 slideMargin: 10
             });            
-        },
-
+        }
     };
 
 }();
+
+function initclick(){
+    if ($('#top_navbar').length) {
+        checkURL();
+    };
+
+    $(document).on('click', '#top_navbar a[href!="#"]', function (e) {
+        e.preventDefault();
+        var $this = $(e.currentTarget);
+        window.location.href = $this.attr('href');
+    });
+
+// fire links with targets on different window
+    $(document).on('click', '#top_navbar a[target="_blank"]', function (e) {
+        e.preventDefault();
+        var $this = $(e.currentTarget);
+
+        window.open($this.attr('href'));
+    });
+
+// fire links with targets on same window
+    $(document).on('click', '#top_navbar a[target="_top"]', function (e) {
+        e.preventDefault();
+        var $this = $(e.currentTarget);
+
+        window.location = ($this.attr('href'));
+    });
+
+// all links with hash tags are ignored
+    $(document).on('click', '#top_navbar a[href="#"]', function (e) {
+        e.preventDefault();
+    });
+
+// DO on hash change
+    $(window).on('hashchange', function () {
+        checkURL();
+    });
+}
+function loadPage(){
+    loadURL("top.html",$(".top"));
+    loadURL("header.html",$(".header"));
+    loadURL("footer.html",$(".footer"));
+    loadURL("copyright.html",$(".copyright"));
+
+    initclick();
+}
+
+// LOAD AJAX PAGES
+function loadURL(url, container) {
+    //console.log(container)
+
+    $.ajax({
+        type : "GET",
+        url : url,
+        dataType : 'html',
+        cache : true, // (warning: this will cause a timestamp and will call the request twice)
+        beforeSend : function() {
+
+        },
+
+        success : function(data) {
+            // cog replaced here...
+            container.html(data);
+        },
+        error : function(xhr, ajaxOptions, thrownError) {
+//            container.html('<h4 style="margin-top:10px; display:block; text-align:left"><i class="fa fa-warning txt-color-orangeDark"></i> Error 404! Page not found.</h4>');
+        },
+        async : false
+    });
+
+    //console.log("ajax request sent");
+}
+
+// CHECK TO SEE IF URL EXISTS
+function checkURL() {
+
+    //get the url by removing the hash
+//    var url = location.url.replace(/^#/, '');
+//    var url = location.href replace;
+    var localUrl = location.href;
+    var n1 = localUrl.lastIndexOf('/')+1;
+    var url = localUrl.substring(n1,localUrl.length);
+
+    // Do this if url exists (for page refresh, etc...)
+    if (url) {
+        // remove all active class
+        $('#top_navbar li.active').removeClass("active");
+        // match the url and add the active class
+        $('#top_navbar li:has(a[href="' + url + '"])').addClass("active");
+
+
+        var title = ($('nav a[href="' + url + '"]').attr('title'));
+
+        // change page title from global var
+        document.title = (title || document.title);
+
+        // parse url to jquery
+//        loadURL(url + location.search, container);
+    } else {
+
+        // grab the first URL from nav
+        var $this = $('#top_navbar > ul > li:first-child > a[href!="#"]');
+
+        //update href
+        window.location.href = $this.attr('href');
+
+    }
+
+}
