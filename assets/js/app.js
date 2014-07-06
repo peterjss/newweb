@@ -226,6 +226,9 @@ function initclick(){
     $(window).on('hashchange', function () {
         checkURL();
     });
+
+    jQuery('#style_color').attr("href", "assets/css/themes/" + "blue" + ".css");
+    jQuery('#style_color-header-1').attr("href", "assets/css/themes/" + "blue" + ".css");
 }
 function loadPage(){
     loadURL("top.html",$(".top"));

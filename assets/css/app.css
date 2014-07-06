@@ -18,9 +18,13 @@ body {
    line-height: 1.6;
 }
 
-p, a, li { 
-   color: #555;
-   line-height: 1.6; 
+/*p, a, li { */
+   /*color: #555;*/
+   /*line-height: 1.6; */
+/*}*/
+p, a, li {
+    color: #333;
+    line-height: 1.6;
 }
 
 a,
@@ -884,6 +888,14 @@ i.style-switcher-btn-option:hover {
 }
 
 
+/*customer setting*/
 .navbar-default .navbar-brand {
     color: #333333;
+}
+
+
+.breadcrumbs h1 {
+    color: #000000;
+    font-size: 26px;
+    margin-top: 12px;
 }
