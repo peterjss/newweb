@@ -57,7 +57,7 @@
 	font-weight: 200;
 	line-height: 35px;
 	margin-bottom: 12px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Helvetica Neue",Helvetica,Arial,'Open Sans', sans-serif;
 }
 .purchase a.btn-buy {
 	color: #fff;
@@ -203,7 +203,7 @@ blockquote:hover {
 	font-size: 16px;
 	background: #fcfcfc;
 	border-left: 4px solid #94c564; 
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Helvetica Neue",Helvetica,Arial,'Open Sans', sans-serif;
 }
 .hero h1, .hero p { 
 	text-shadow: 1px 1px 0 #fff;
